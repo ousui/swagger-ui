@@ -74,6 +74,11 @@ export const parseToJson = (str) => ({specActions, specSelectors, errActions}) =
     })
   }
   if(json && typeof json === "object") {
+    let host = json.host || "."
+    if (host == '.' || host == '_') {
+      json.host = location.host
+    }
+
     return specActions.updateJsonSpec(json)
   }
   return {}
