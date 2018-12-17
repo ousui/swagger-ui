@@ -109,7 +109,7 @@ section.models
 
     &.is-open
     {
-        padding: 0 0 20px;
+        padding: 0 0 5px;
         h4
         {
             margin: 0 0 5px 0;
@@ -165,7 +165,7 @@ section.models
 
     .model-container
     {
-        margin: 0 20px 15px;
+        margin: 0 10px 5px;
         position: relative;
 
         transition: all .5s;
@@ -180,12 +180,12 @@ section.models
 
         &:first-of-type
         {
-            margin: 20px;
+            margin: 5px 10px 5px;
         }
 
         &:last-of-type
         {
-            margin: 0 20px;
+            margin: 0 10px 5px;
         }
 
         .models-jump-to-path {
@@ -205,7 +205,7 @@ section.models
 
 .model-box
 {
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
 
     border-radius: 4px;
