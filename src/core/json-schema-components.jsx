@@ -184,12 +184,12 @@ export class JsonSchema_array extends PureComponent {
           return (
             <div key={i} className="json-schema-form-item">
               <JsonSchemaForm fn={fn} getComponent={getComponent} value={item} onChange={(val) => this.onItemChange(val, i)} schema={schema} />
-              <Button className="btn btn-sm json-schema-form-item-remove" onClick={()=> this.removeItem(i)} > - </Button>
+              <Button className="btn btn-sm json-schema-form-item-remove" onClick={()=> this.removeItem(i)} > 删除 </Button>
             </div>
             )
           }).toArray()
         }
-        <Button className={`btn btn-sm json-schema-form-item-add ${errors.length ? "invalid" : null}`} onClick={this.addItem}> Add item </Button>
+        <Button className={`btn btn-sm json-schema-form-item-add ${errors.length ? "invalid" : null}`} onClick={this.addItem}> 添加 </Button>
       </div>
     )
   }

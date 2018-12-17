@@ -118,7 +118,7 @@ export default class Operation extends PureComponent {
               { (operation && operation.size) || operation === null ? null :
                 <img height={"32px"} width={"32px"} src={require("core/../img/rolling-load.svg")} className="opblock-loading-animation" />
               }
-              { deprecated && <h4 className="opblock-title_normal"> Warning: Deprecated</h4>}
+              { deprecated && <h4 className="opblock-title_normal"> 警告: 已经弃用! </h4>}
               { description &&
                 <div className="opblock-description-wrapper">
                   <div className="opblock-description">

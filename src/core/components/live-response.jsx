@@ -6,7 +6,7 @@ import { Iterable } from "immutable"
 const Headers = ( { headers } )=>{
   return (
     <div>
-      <h5>Response headers</h5>
+      <h5>响应头/Response Headers</h5>
       <pre>{headers}</pre>
     </div>)
 }
@@ -17,7 +17,7 @@ Headers.propTypes = {
 const Duration = ( { duration } ) => {
   return (
     <div>
-      <h5>Request duration</h5>
+      <h5>请求耗时</h5>
       <pre>{duration} ms</pre>
     </div>
   )
@@ -73,18 +73,18 @@ export default class LiveResponse extends React.Component {
       <div>
         { curlRequest && <Curl request={ curlRequest }/> }
         { url && <div>
-            <h4>Request URL</h4>
+            <h4>请求 URL</h4>
             <div className="request-url">
               <pre>{url}</pre>
             </div>
           </div>
         }
-        <h4>Server response</h4>
+        <h4>服务端响应</h4>
         <table className="responses-table live-responses-table">
           <thead>
           <tr className="responses-header">
-            <td className="col col_header response-col_status">Code</td>
-            <td className="col col_header response-col_description">Details</td>
+            <td className="col col_header response-col_status">状态码/Http Status Code</td>
+            <td className="col col_header response-col_description">描述</td>
           </tr>
           </thead>
           <tbody>
@@ -93,7 +93,7 @@ export default class LiveResponse extends React.Component {
                 { status }
                 {
                   notDocumented ? <div className="response-undocumented">
-                                    <i> Undocumented </i>
+                                    <i> 文档未定义 </i>
                                   </div>
                                 : null
                 }

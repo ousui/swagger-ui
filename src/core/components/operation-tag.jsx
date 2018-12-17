@@ -91,7 +91,7 @@ export default class OperationTag extends React.Component {
 
             <button
               className="expand-operation"
-              title={showTag ? "Collapse operation": "Expand operation"}
+              title={showTag ? "收起操作": "展开操作"}
               onClick={() => layoutActions.show(isShownKey, !showTag)}>
 
               <svg className="arrow" width="20" height="20">

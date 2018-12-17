@@ -133,7 +133,7 @@ export default class ResponseBody extends React.PureComponent {
         // in `updateParsedContent`, so let's display it
         bodyEl = <div>
           <p className="i">
-            Unrecognized response type; displaying content as text.
+            未认证响应类型: 以文本(Text)形式展示。
           </p>
           <HighlightCode downloadable fileName={`${downloadName}.txt`} value={ parsedContent } />
         </div>
@@ -141,7 +141,7 @@ export default class ResponseBody extends React.PureComponent {
       } else {
         // Give up
         bodyEl = <p className="i">
-          Unrecognized response type; unable to display.
+          未认证响应类型: 不能进行展示。
         </p>
       }
     } else {
@@ -150,7 +150,7 @@ export default class ResponseBody extends React.PureComponent {
     }
 
     return ( !bodyEl ? null : <div>
-        <h5>Response body</h5>
+        <h5>响应体/Response Body</h5>
         { bodyEl }
       </div>
     )

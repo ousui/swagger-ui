@@ -211,7 +211,7 @@ export default class ParameterRow extends Component {
 
           { (bodyParam || !isExecute) && isDisplayParamEnum ?
             <Markdown className="parameter__enum" source={
-                "<i>Available values</i> : " + paramEnum.map(function(item) {
+                "<i>可用值</i>: " + paramEnum.map(function(item) {
                     return item
                   }).toArray().join(", ")}/>
             : null

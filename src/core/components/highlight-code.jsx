@@ -54,7 +54,7 @@ export default class HighlightCode extends Component {
       <div className="highlight-code">
         { !downloadable ? null :
           <div className="download-contents" onClick={this.downloadText}>
-            Download
+            下载
           </div>
         }
         <pre
