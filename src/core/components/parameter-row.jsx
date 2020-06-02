@@ -218,7 +218,7 @@ export default class ParameterRow extends Component {
           }
 
           { (bodyParam || !isExecute) && paramDefaultValue !== undefined ?
-            <Markdown className="parameter__default" source={"<i>Default value</i> : " + paramDefaultValue}/>
+            <Markdown className="parameter__default" source={"<i>默认值</i>: " + paramDefaultValue}/>
             : null
           }
 

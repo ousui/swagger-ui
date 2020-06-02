@@ -411,75 +411,75 @@ export const propChecker = (props, nextProps, objectList=[], ignoreList=[]) => {
 
 export const validateMaximum = ( val, max ) => {
   if (val > max) {
-    return "Value must be less than Maximum"
+    return "值必须小于最大值(Maximum)"
   }
 }
 
 export const validateMinimum = ( val, min ) => {
   if (val < min) {
-    return "Value must be greater than Minimum"
+    return "值必须大于最小值(Minimum)"
   }
 }
 
 export const validateNumber = ( val ) => {
   if (!/^-?\d+(\.?\d+)?$/.test(val)) {
-    return "Value must be a number"
+    return "值必须为数字(number)"
   }
 }
 
 export const validateInteger = ( val ) => {
   if (!/^-?\d+$/.test(val)) {
-    return "Value must be an integer"
+    return "值必须为整型(integer)"
   }
 }
 
 export const validateFile = ( val ) => {
   if ( val && !(val instanceof win.File) ) {
-    return "Value must be a file"
+    return "值必须为文件类型(file)"
   }
 }
 
 export const validateBoolean = ( val ) => {
   if ( !(val === "true" || val === "false" || val === true || val === false) ) {
-    return "Value must be a boolean"
+    return "值必须为布尔类型(boolean)"
   }
 }
 
 export const validateString = ( val ) => {
   if ( val && typeof val !== "string" ) {
-    return "Value must be a string"
+    return "值必须为字符串(string)"
   }
 }
 
 export const validateDateTime = (val) => {
     if (isNaN(Date.parse(val))) {
-        return "Value must be a DateTime"
+        return "值必须为时间类型(DateTime)"
     }
 }
 
 export const validateGuid = (val) => {
     val = val.toString().toLowerCase()
     if (!/^[{(]?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}[)}]?$/.test(val)) {
-        return "Value must be a Guid"
+        return "值必须为 Guid"
     }
 }
 
 export const validateMaxLength = (val, max) => {
   if (val.length > max) {
-      return "Value must be less than MaxLength"
+      return "值必须小于最大长度(MaxLength)"
   }
 }
 
 export const validateMinLength = (val, min) => {
   if (val.length < min) {
-      return "Value must be greater than MinLength"
+      return "值必须大于最小长度(MinLength)"
   }
 }
 
 export const validatePattern = (val, rxPattern) => {
   var patt = new RegExp(rxPattern)
   if (!patt.test(val)) {
-      return "Value must follow pattern " + rxPattern
+      return "值必须符合以下正则表达式: " + rxPattern
   }
 }
 
@@ -527,7 +527,7 @@ export const validateParam = (param, isXml, isOAS3 = false) => {
           JSON.parse(value)
           oas3ObjectCheck = true
         } catch(e) {
-          errors.push("Parameter string value must be valid JSON")
+          errors.push("参数字符串值必须为有效的 JSON 字符串! ")
           return errors
         }
       }
@@ -541,7 +541,7 @@ export const validateParam = (param, isXml, isOAS3 = false) => {
     const passedAnyCheck = allChecks.some(v => !!v)
 
     if ( required && !passedAnyCheck ) {
-      errors.push("Required field is not provided")
+      errors.push("必填字段不能为空! ")
       return errors
     }
 
